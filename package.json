@@ -54,7 +54,6 @@
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
     "jquery": "^3.6.4",
-    "jsontostr": "^8.9.6",
     "leaflet": "^1.9.3",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
