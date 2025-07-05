@@ -2,7 +2,7 @@
   --bg: black;
   --color:gold;
   --dark_color:#b39800;
-	--light_color:yellow;
+  --light_color:yellow;
 
   --red: red;
   --darkred: darkred;
@@ -27,6 +27,14 @@
 
   --firework_color: red;
 }
+
+/* Light theme */
+.theme-light {
+  --color:#988102;
+  --transparent_color: rgba(170, 170, 2, 0.2);
+  --green: rgba(0, 128, 0, 0.5);
+}
+
 
 body{
 	background-color:var(--green);
