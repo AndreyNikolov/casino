@@ -3,6 +3,7 @@ import { translate } from '../../translations/translate'
 import { Form, Button, Col, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import Wallet from './wallet'
 
 function SignIn(props) {
     const {lang} = props
@@ -52,6 +53,11 @@ function SignIn(props) {
                     <div className="input_eye" onClick={()=>handleVisible()}>
                         {visible ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}                        
                     </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Wallet />
                 </Col>
             </Row>
             <Row>
