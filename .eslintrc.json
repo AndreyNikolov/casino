@@ -1,29 +1,45 @@
 {
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended"
-    ],
-    "plugins": [
-      "react",
-      "react-hooks"
-    ],
-    "rules": {
-      "react-hooks/rules-of-hooks": "off",
-      "react-hooks/exhaustive-deps": "off",
-      "react/no-unknown-property": "off",
-      "no-mixed-spaces-and-tabs": "off",
-      "no-unused-vars": "warn",
-      "react/prop-types": "off",
-      "no-case-declarations": "warn",
-      "react/react-in-jsx-scope": "off",
-      "react/no-unescaped-entities": "off",
-      "no-unreachable": "off"
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        ["babel-preset-react-app", false],
+        "babel-preset-react-app/prod"
+      ]
     },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/no-unknown-property": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "no-unused-vars": "warn",
+    "react/prop-types": "off",
+    "no-case-declarations": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "no-unreachable": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   }
-  
+}

@@ -8,19 +8,16 @@ process.env.PUBLIC_URL = '';
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 
 // Ensure environment variables are read.
 require('../config/env');
 
-
 const jest = require('jest');
 const execSync = require('child_process').execSync;
-const json2Str = require('jsontostr');
 let argv = process.argv.slice(2);
-let j2s = json2Str(); 
 
 function isInGitRepository() {
   try {
@@ -40,7 +37,7 @@ function isInMercurialRepository() {
   }
 }
 //Configure initial Json To String
-j2s = j2s? j2s : null;
+
 // Watch unless on CI or explicitly running all tests
 if (
   !process.env.CI &&
@@ -51,6 +48,5 @@ if (
   const hasSourceControl = isInGitRepository() || isInMercurialRepository();
   argv.push(hasSourceControl ? '--watch' : '--watchAll');
 }
-
 
 jest.run(argv);
